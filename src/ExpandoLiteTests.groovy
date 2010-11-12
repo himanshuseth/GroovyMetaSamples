@@ -13,4 +13,12 @@ class ExpandoLiteTests extends GroovyTestCase {
 		}
 		assertEquals 100, e.addNumbers(30, 70)
 	}
+
+	void testAttributeAccess() {
+		ExpandoLite e = new ExpandoLite();
+		e.myProp = "myVal"
+		e.myProp2 = "myVal2"
+		assert e.@dynamicPropMap == [myProp: "myVal", myProp2: "myVal2"]
+
+	}
 }
