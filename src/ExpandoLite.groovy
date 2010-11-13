@@ -12,7 +12,7 @@ class ExpandoLite {
 
 	def methodMissing(String methodName, args) {
 		def method = dynamicPropMap[methodName]
-		if (method && method instanceof Closure) {
+		if (method instanceof Closure) {
 			return method(* args)
 		}
 		throw new MissingMethodException("No Method found ${methodName} with args ${args}")

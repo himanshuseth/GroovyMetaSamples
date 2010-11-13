@@ -7,7 +7,7 @@ class MyBuilder {
 		outlineText += ("  " * depth) + "+" + " ${methodName}\n"
 		if (args) {
 			def argument = args[0]
-			if (argument && argument instanceof Closure) {
+			if (argument instanceof Closure) {
 				depth++
 				Closure clone = argument.clone()
 				clone.delegate = this

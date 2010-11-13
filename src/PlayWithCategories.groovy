@@ -8,7 +8,7 @@ class MySampleCategory {
 	}
 
 }
-println "hello"
+println MySampleClass.multiplyBy3(2)
 
 use(MySampleCategory) {
 	println 2.multiplyBy3()

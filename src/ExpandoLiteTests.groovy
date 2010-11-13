@@ -3,7 +3,7 @@ class ExpandoLiteTests extends GroovyTestCase {
 	void testDynamicPropertyAccess() {
 		ExpandoLite e = new ExpandoLite();
 		e.myProp = "myVal"
-		assertEquals "myVal", e.myProp
+		assert "myVal" == e.myProp
 	}
 
 	void testDynamicMethodInvocation() {
